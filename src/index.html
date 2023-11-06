@@ -20,37 +20,37 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="font-poppins bg-body text-white">
+  <body id="top" class="font-poppins bg-body text-white">
     <!-- ナビゲーションバー -->
     <header class="py-6">
       <div
         class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full"
       >
-        <div class="text-3xl font-bold">ShinCode.com</div>
+        <div class="text-3xl font-bold">PortFolio</div>
         <div class="space-x-12 hidden md:flex items-center">
           <a
             href="#home"
             class="hover:text-selected-text transition-all duration-300"
           >
-            ホーム
+            HOME
           </a>
           <a
             href="#portfolio"
             class="hover:text-selected-text transition-all duration-300"
           >
-            ポートフォリオ
+            PORTFOLIO
           </a>
           <a
             href="#skills"
             class="hover:text-selected-text transition-all duration-300"
           >
-            スキル一覧
+            SKILLS
           </a>
           <a href="#contact">
             <button
               class="px-6 py-2 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
             >
-              お問い合わせ
+              CONTACT
             </button>
           </a>
         </div>
@@ -66,20 +66,20 @@
     >
       <div class="flex flex-wrap md:flex-nowrap">
         <div
-          class="md:my-36 lg:ml-20 flex flex-wrap justify-center md:justify-start max-w-xl"
+          class="md:my-36 lg:ml-40 flex flex-wrap flex-col justify-center md:justify-start max-w-xl"
         >
           <h1
             class="font-bold text-5xl text-center md:text-left lg:text-7xl md:text-6xl"
           >
-            TailWindCSSで <br />
-            AAA<br />
-            example<br />
+            Kanno's <br />
+            PortFolio<br />
+            <!-- example<br /> -->
           </h1>
           <button
             class="px-6 py-4 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300 mt-10"
           >
             <i class="fa-solid fa-rocket mr-1"></i>
-            <span>もっと見る</span>
+            <span>More</span>
           </button>
         </div>
         <img
@@ -96,11 +96,11 @@
       class="container lg:mt-80 mt-60 flex justify-between mx-auto px-8 md:px-14 lg:px-24 w-full"
     >
       <section class="w-full">
-        <h2 class="secondary-title">my PortFolio</h2>
-        <p class="section-paragraph">My Applications</p>
+        <h2 class="secondary-title">My Products</h2>
+        <p class="section-paragraph">Web sites & Applications I developed</p>
 
         <!-- TODO xl以上のレスポンシブの際のmt調整 -->
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10">
           <img
             src="../images/portfolio1.jpg"
             alt="img"
@@ -137,7 +137,7 @@
 
     <!-- スキルスタック -->
     <div
-      id="portfolio"
+      id="skills"
       class="container lg:mt-70 mt-60 flex justify-between mx-auto px-8 md:px-14 lg:px-24 w-full"
     >
       <section class="w-full">
@@ -241,5 +241,58 @@
         
       </section>
     </div>
+
+    <!-- お問い合わせ -->
+    <div
+      id="contact"
+      class="container lg:mt-60 mt-52 mb-20 flex justify-between mx-auto px-8 md:px-14 lg:px-24 w-full"
+    >
+      <section class="w-full">
+        <h2 class="secondary-title">Contact</h2>
+        <p class="section-paragraph">My Address</p>
+        <div class="w-full grid lg:grid-cols-2 gap-8  lg:gap-32 mt-16">
+          <div class="space-y-12">
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Name</label>
+              <input type="text" class="w-full border border-inputBorder bg-input px-4 py-4" />
+            </div>
+
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Email</label>
+              <input type="email" class="w-full border border-inputBorder bg-input px-4 py-4" />
+            </div>
+
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Message</label>
+              <input type="text" class="w-full border border-inputBorder bg-input px-4 py-4" />
+            </div>
+            <button
+              class="px-8 py-3 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
+            >
+              送信する
+            </button>
+          </div>
+          
+          <div>
+            <p class="text-secondary">000-1111-2222</p>
+            <a href="mailto:kannoryuho@gmail.com">kannoryuho@gmail.com</a>
+            <!-- sns -->
+            <div class="mt-20 space-x-6">
+              <a href="https://www.linkedin.com/in/ryuho-kanno-717a45245" target="_blank">
+                <i class="fa-brands fa-linkedin text-3xl text-blue-400"></i>
+              </a>
+              <a href="https://www.instagram.com/__nonfleek" target="_blank">
+                <i class="fa-brands fa-instagram text-3xl text-pink-400"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+
+    <a href="#top">
+      <button v-show="buttonActive" class="fixed right-3 bottom-6 text-white bg-teal-500 w-20 h-20 rounded-full">TOP</button>
+    </a>
   </body>
 </html>
